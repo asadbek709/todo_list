@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="uz">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Todo App</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <section class="card" aria-labelledby="app-title">
+    <h1 id="app-title">Todo App</h1>
+
+    <div class="input-row">
+      <input id="newTodo" type="text" placeholder="Add your new todo" aria-label="Add todo">
+      <button id="addBtn" class="btn-add" aria-label="Add">＋</button>
+    </div>
+
+    <ul id="todoList" class="todo-list" aria-live="polite"></ul>
+
+    <div class="footer">
+      <div class="small" id="counter">You have 0 pending tasks</div>
+      <button id="clearAll" class="clear-btn">Clear All</button>
+    </div>
+  </section>
+  <script src="./app.js"></script>
+</body>
+</html>

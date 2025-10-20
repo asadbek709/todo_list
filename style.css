@@ -1,0 +1,140 @@
+:root {
+  --card-bg: #fff;
+  --accent: #7b3fe4;
+  --muted: #eee;
+  --danger: #e74c3c;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: Inter, system-ui, Arial;
+  background: linear-gradient(180deg, #72e0c3 0%, #5db6f2 60%, #5b7be0 100%);
+}
+
+.card {
+  width: 360px;
+  background: var(--card-bg);
+  border-radius: 8px;
+  padding: 22px;
+  box-shadow: 0 10px 30px rgba(19, 28, 54, 0.12);
+}
+
+h1 {
+  margin: 0 0 12px;
+  font-size: 20px;
+  color: #111;
+}
+
+.input-row {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 14px;
+}
+
+.input-row input {
+  flex: 1;
+  padding: 10px 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.btn-add {
+  background: var(--accent);
+  border: none;
+  color: white;
+  padding: 0 12px;
+  border-radius: 6px;
+  min-width: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+ul.todo-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.todo-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+  border-radius: 4px;
+  background: linear-gradient(180deg, #f6f6f6, #ececec);
+}
+
+.todo-item .text {
+  flex: 1;
+  font-size: 14px;
+  color: #222;
+}
+
+.todo-item.done .text {
+  text-decoration: line-through;
+  opacity: 0.6;
+}
+
+.todo-item button.delete {
+  background: var(--danger);
+  border: none;
+  color: white;
+  padding: 6px 8px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.todo-item input[type=checkbox] {
+  width: 18px;
+  height: 18px;
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 12px;
+}
+
+.clear-btn {
+  background: var(--accent);
+  border: none;
+  color: white;
+  padding: 8px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.small {
+  font-size: 13px;
+  color: #444;
+}
+
+.empty {
+  padding: 12px;
+  border-radius: 4px;
+  text-align: center;
+  color: #666;
+  background: #fafafa;
+}
+
+@media (max-width: 420px) {
+  .card {
+    width: 92vw;
+  }
+}
